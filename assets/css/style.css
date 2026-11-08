@@ -1,0 +1,240 @@
+/* Base Layout & Typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #212529;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header & Title */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+p.intro {
+  color: #4b5563;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Year Navigation (Pills) */
+.year-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.year-nav a {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease-in-out;
+}
+
+.year-nav a:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* Year Headings */
+h2.year-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937;
+}
+
+/* Thesis List Items (Bulletless Cards) */
+ul.thesis-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul.thesis-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+ul.thesis-list li:last-child {
+  border-bottom: none;
+}
+
+.thesis-author {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.thesis-author strong {
+  color: #111827;
+}
+
+.thesis-title a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.thesis-title a:hover {
+  text-decoration: underline;
+}
+
+.thesis-supervisor {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* Footer Link */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* ---- additions for course listings ---- */
+
+p.stats {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+
+details.about {
+  max-width: 46rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+details.about summary,
+details.thesis-more summary {
+  cursor: pointer;
+  color: #1d4ed8;
+}
+
+details.about p {
+  margin: 0.5rem 0 0;
+  line-height: 1.5;
+}
+
+/* Search */
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 1rem 0;
+}
+
+.search label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.search input {
+  flex: 1 1 16rem;
+  max-width: 28rem;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+#result-count {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.year-nav a .n {
+  margin-left: 0.3rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.year-nav a.dim {
+  opacity: 0.35;
+}
+
+.no-results {
+  padding: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+  border-radius: 6px;
+}
+
+/* Course entries */
+.thesis-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 1.25rem;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-top: 0.25rem;
+}
+
+li.course {
+  overflow-wrap: anywhere;
+}
+
+li.course:target {
+  background: #eff6ff;
+}
+
+details.thesis-more {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+details.thesis-more h4 {
+  margin: 0.75rem 0 0.2rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.prose {
+  white-space: pre-line;
+  color: #374151;
+}
+
+li.course[hidden],
+section.uni[hidden] {
+  display: none;
+}
+
+@media print {
+  .search, .year-nav { display: none; }
+}

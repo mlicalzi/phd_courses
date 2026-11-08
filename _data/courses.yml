@@ -1,4 +1,4 @@
-# One entry per course. The page groups entries by `university`, so write the university
+it# One entry per course. The page groups entries by `university`, so write the university
 # name identically in every entry of that university (it is also the heading and the label
 # in the navigation bar). Entries keep the order of this file within each university.
 #
@@ -23,11 +23,11 @@
 #
 # The two entries below are placeholders: delete them.
 
-- university: Example University
-  phd_program: PhD in Economics and Finance (example)
-  title: "EXAMPLE - Stochastic methods for finance"
+- university: Università Ca' Foscari Venezia
+  phd_program: PhD in Economics
+  title: "Advanced microeconomics"
   url:
-  referent: "Jane Doe (jane.doe@example.org)"
+  referent: "Marco LiCalzi (licalzi@unive.it)"
   hours: "30 ore accademiche"
   period: "Novembre - Dicembre"
   intensive: "No"

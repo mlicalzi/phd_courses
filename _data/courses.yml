@@ -1,4 +1,4 @@
-it# One entry per course. The page groups entries by `university`, so write the university
+# One entry per course. The page groups entries by `university`, so write the university
 # name identically in every entry of that university (it is also the heading and the label
 # in the navigation bar). Entries keep the order of this file within each university.
 #

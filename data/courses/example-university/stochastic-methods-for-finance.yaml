@@ -1,0 +1,19 @@
+title: EXAMPLE - Stochastic methods for finance
+phd_programs:
+  - PhD in Economics and Finance (example)
+referent_raw: Jane Doe (jane.doe@example.org)
+emails: [jane.doe@example.org]
+hours_raw: 30 ore accademiche
+hours: 30
+period_raw: Novembre - Dicembre
+period_months: [11, 12]
+intensive_raw: no
+intensive: no
+in_person_raw: Sì
+in_person: yes
+online_raw: No
+online: no
+program: |
+  Placeholder general programme.
+  - topic one
+  - topic two

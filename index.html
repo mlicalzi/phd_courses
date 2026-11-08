@@ -4,7 +4,7 @@ title: PhD Courses | SECS-S06
 ---
 
 {% assign courses = site.data.courses %}
-{% assign groups = courses | group_by: 'university' | sort_natural: 'name' %}
+{% assign groups = courses | group_by: 'id' | sort_natural: 'name' %}
 {% assign intro = site.data.meta.intro_en %}
 
 <h1>PhD Courses</h1>

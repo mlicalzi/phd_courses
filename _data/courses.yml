@@ -23,8 +23,22 @@
 # The two entries below are placeholders: delete them.
 
 - university: Università Ca' Foscari Venezia
-  phd_program: PhD in Economics
+  id: unive
+  phd_program: Economics
   title: "Advanced Microeconomics"
+  url: https://www.unive.it/data/course/585612
+  referent: "Marco LiCalzi (licalzi@unive.it)"
+  hours: "30"
+  period: "Nov.-Dec."
+  intensive: "N"
+  in_person: "Y"
+  online: "N"
+  syllabus: https://www.unive.it/data/course/585612/programma
+
+- university: Università di Verona
+  id: univr
+  phd_program: Economia e Finanza
+  title: "Continuous Time Econometrics"
   url: https://www.unive.it/data/course/585612
   referent: "Marco LiCalzi (licalzi@unive.it)"
   hours: "30"

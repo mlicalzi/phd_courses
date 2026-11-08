@@ -21,7 +21,7 @@
 # what the university wrote ("No", "Sì", "SI, obbligatoria", "Su richiesta").
 
 - university: Università Ca' Foscari Venezia
-  id: unive
+  id: UniVe
   program: PhD in Economics
   title: Advanced Microeconomics
   instructor: Marco LiCalzi
@@ -34,7 +34,7 @@
   syllabus: https://www.unive.it/data/course/585612/programma
 
 - university: Università di Verona
-  id: univr
+  id: UniVr
   program: Dottorato in Economia e Finanza
   title: Continuous Time Econometrics
   instructor: Cecilia Mancini, Chiara Amorino

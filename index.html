@@ -53,7 +53,7 @@ title: PhD Courses | SECS-S06
       </div>
       {% if c.referent %}<div class="thesis-supervisor">Contact: {{ c.referent | escape }}</div>{% endif %}
       <div class="thesis-supervisor">
-        External students &ndash;
+        Guest students &ndash;
         in person: {% if c.in_person != nil and c.in_person != '' %}{% include yn.html v=c.in_person %}{% else %}not stated{% endif %};
         online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}
       </div>

@@ -57,8 +57,8 @@ title: PhD Courses | SECS-S06
         in person: {% if c.in_person != nil and c.in_person != '' %}{% include yn.html v=c.in_person %}{% else %}not stated{% endif %};
         online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}
       </div>
-      {% if c.syllabus %}
-      <h4>Syllabus</h4>
+     <div class="thesis-meta"> 
+        {% if c.syllabus %}<span><strong>Syllabus:</strong> 
         {% assign syl = c.syllabus | strip %}
         {% assign tokens = syl | normalize_whitespace | split: ' ' %}
         {% assign has_url = false %}
@@ -69,7 +69,7 @@ title: PhD Courses | SECS-S06
         {% else %}
           <div class="prose">{{ syl | escape }}</div>
         {% endif %}
-        {% endif %}      
+        </span>{% endif %}      
       {% if c.notes %}<div class="thesis-supervisor">Note: {{ c.notes | escape }}</div>{% endif %}
     </li>
     {% endfor %}

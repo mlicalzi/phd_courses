@@ -44,7 +44,7 @@ title: PhD Courses | SECS-S06
   <h2 class="year-heading">{{ uni.name | escape }}</h2>
   <ul class="thesis-list">
     {% for c in group.items %}
-    <li class="course" id="{{ group.name | slugify }}-{{ c.title | slugify }}">
+    <li class="course" id="{{ uni.name | slugify }}-{{ c.title | slugify }}">
       <div class="thesis-title">{% if c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
       {% if c.program %}<div class="thesis-author">{{ c.program | escape }}</div>{% endif %}
       <div class="thesis-meta">

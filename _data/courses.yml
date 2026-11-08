@@ -4,7 +4,7 @@
 #
 # Fields, following the SECS-S06 inventory (all optional except `university` and `title`):
 #   university    display name, e.g. "Roma 1" or "Ca' Foscari"
-#   phd_program   "Denominazione dottorato"
+#   program       "Denominazione dottorato"
 #   coordinator   "Coordinatore"
 #   title         "Denominazione corso"
 #   instructor    "Docente"
@@ -23,7 +23,7 @@
 
 - university: Università Ca' Foscari Venezia
   id: unive
-  phd_program: Economics
+  program: PhD in Economics
   coordinator: Francesca Zantomio 
   title: "Advanced Microeconomics"
   instructor: "Marco LiCalzi"
@@ -37,7 +37,7 @@
 
 - university: Università di Verona
   id: univr
-  phd_program: Economia e Finanza
+  program: Dottorato in Economia e Finanza
   coordinator: "Athena Picarelli"
   title: "Continuous Time Econometrics"
   instructor: "Cecilia Mancini, Chiara Amorino"

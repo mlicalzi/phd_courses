@@ -1,11 +1,8 @@
 # PhD Courses | SECS-S06
 
-A list of doctoral courses in the SECS-S06 area, built the same way as
-[AMASES_theses](https://github.com/mlicalzi/AMASES_theses): a Jekyll site published with
-GitHub Pages, one data file, one layout, one page. KISS applies.
+A list of doctoral courses in the SECS-S06 area. KISS applies.
 
-This repository is a **scaffold**: it holds the page construction and two placeholder courses.
-The real entries still have to be added to `_data/courses.yml`.
+This repository is a **scaffold**: the real entries still have to be added to `_data/courses.yml`.
 
 ## Layout
 

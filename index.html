@@ -39,7 +39,7 @@ title: PhD Courses | SECS-S06
 <p id="no-results" class="no-results" hidden>No course matches this search.</p>
 
 {% for group in groups %}
-{% assign uni_name = group.items.first.university %}
+{% assign uni_name = group.items.university %}
 <section id="{{ uni.name | slugify }}" class="uni">
   <h2 class="year-heading">{{ uni.name | escape }}</h2>
   <ul class="thesis-list">

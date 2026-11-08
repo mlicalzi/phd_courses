@@ -13,7 +13,6 @@
 #   intensive     "Intensivo o meno"
 #   in_person     "Fruizione in presenza" (external students)
 #   online        "Fruizione online" (external students)
-#   programme     "Programma di massima"  (use a | block for several lines)
 #   syllabus      "Syllabus"              (use a | block for several lines)
 #   notes         "Note"
 #
@@ -43,10 +42,6 @@
   period: "I semester"
   in_person: "Y"
   online: "On demand"
-  programme: |
-    Placeholder general programme.
-    - topic one
-    - topic two
   syllabus: |
     Placeholder syllabus.
   notes: "Example note."

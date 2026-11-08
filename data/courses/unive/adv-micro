@@ -1,1 +1,13 @@
-
+title: Advanced Microeconomics
+phd_programs:
+  - PhD in Economics
+referent_raw: Marco LiCalzi
+hours_raw: 30                  # a range: no single number, so `hours` is left out
+period_raw: I semestre           # no month names: not filterable by month
+in_person_raw: Sì
+in_person: yes
+online_raw: Su richiesta
+online: conditional
+syllabus: |
+  Placeholder syllabus with a link: https://example.org/syllabus
+notes: Example note.

@@ -17,11 +17,6 @@ title: PhD Courses | SECS-S06
   <p>Working group: {{ site.data.meta.working_group | join: ', ' | escape }}.</p>
 </details>
 
-<details class="about">
-  <summary>Testo originale in italiano</summary>
-  {% for p in site.data.meta.intro_it %}<p>{{ p | escape }}</p>{% endfor %}
-</details>
-
 <p class="stats">
   Academic year {{ site.data.meta.academic_year | replace: '-', '&ndash;' }}
   &middot; collected {{ site.data.meta.as_of }}
@@ -31,7 +26,7 @@ title: PhD Courses | SECS-S06
 
 <div class="search">
   <label for="q">Search</label>
-  <input id="q" type="search" placeholder="title, topic, syllabus, contact&hellip;" autocomplete="off">
+  <input id="q" type="search" placeholder="title, topic, syllabus, contact&hellip;" autocomplete="on">
   <span id="result-count" aria-live="polite"></span>
 </div>
 

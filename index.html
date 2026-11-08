@@ -57,10 +57,9 @@ title: PhD Courses | SECS-S06
         in person: {% if c.in_person != nil and c.in_person != '' %}{% include yn.html v=c.in_person %}{% else %}not stated{% endif %};
         online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}
       </div>
-      {% if c.programme or c.syllabus %}
+      {% if c.syllabus %}
       <details class="thesis-more">
-        <summary>Programme and syllabus</summary>
-        {% if c.programme %}<h4>General programme</h4><div class="prose">{{ c.programme | strip | escape }}</div>{% endif %}
+        <summary>Syllabus</summary>
         {% if c.syllabus %}<h4>Syllabus</h4><div class="prose">{{ c.syllabus | strip | escape }}</div>{% endif %}
       </details>
       {% endif %}

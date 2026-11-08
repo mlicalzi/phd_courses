@@ -40,7 +40,7 @@ title: PhD Courses | SECS-S06
 
 {% for group in groups %}
 <section id="{{ group.name | slugify }}" class="uni">
-  <h2 class="year-heading">{{ group.name | escape }}</h2>
+  <h2 class="year-heading">{{ group.items.first.university | escape }}</h2>
   <ul class="thesis-list">
     {% for c in group.items %}
     <li class="course" id="{{ c.university | slugify }}-{{ c.title | slugify }}">

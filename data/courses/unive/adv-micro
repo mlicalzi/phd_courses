@@ -1,13 +1,34 @@
 title: Advanced Microeconomics
-phd_programs:
+
+phd_programs:                     # PhD programme(s) the course belongs to
   - PhD in Economics
-referent_raw: Marco LiCalzi
-hours_raw: 30                  # a range: no single number, so `hours` is left out
-period_raw: I semestre           # no month names: not filterable by month
-in_person_raw: Sì
-in_person: yes
-online_raw: Su richiesta
-online: conditional
+
+referent_raw: Marco LiCalzi       (name.surname@university.it)
+emails:                           # addresses to put in the CSV
+  - licalzi@unive.it
+
+hours_raw: 30 ore accademiche
+hours: 30                         # a single number, or null for ranges / sums / free text
+
+period_raw: Novembre - Dicembre
+period_months: [11, 12]           # calendar months it runs (1-12); [] if unknown
+
+intensive_raw: no
+intensive: no                     # yes | no | null
+
+in_person_raw: Sì                 # open to external students in person?
+in_person: yes                    # yes | no | conditional | null
+online_raw: No                    # open to external students online?
+online: no                        # yes | no | conditional | null
+
+program: |
+ This is a second-year doctoral course. Topics may vary across different years. Content is geared towards students with interests in theoretical research, but it showcases applications useful for students with interests in applied or empirical areas. 
+
 syllabus: |
-  Placeholder syllabus with a link: https://example.org/syllabus
-notes: Example note.
+  Syllabus, if different from or more detailed than the programme.
+
+notes: ""
+
+links:                            # optional extra links (http, https or mailto)
+  - text: Course page
+    url: https://www.unive.it/data/course/585612/programma

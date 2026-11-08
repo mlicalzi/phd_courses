@@ -39,12 +39,13 @@ title: PhD Courses | SECS-S06
 <p id="no-results" class="no-results" hidden>No course matches this search.</p>
 
 {% for group in groups %}
-{% assign uni_name = group.items.university %}
-<section id="{{ uni.name | slugify }}" class="uni">
-  <h2 class="year-heading">{{ uni.name | escape }}</h2>
+<section id="{{ group.name | slugify }}" class="uni">
+  <h2 class="year-heading">{{ group.name | escape }}</h2>
   <ul class="thesis-list">
     {% for c in group.items %}
-    <li class="course" id="{{ uni.name | slugify }}-{{ c.title | slugify }}">
+    <li class="course" id="{{ group.name | slugify }}-{{ c.title | slugify }}">
+      {%- comment -%} university: entry printed at the top of each item. {%- endcomment -%}
+      {% if c.university %}<div class="thesis-supervisor course-university"><strong>{{ c.university | escape }}</strong></div>{% endif %}
       <div class="thesis-title">{% if c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
       {% if c.program %}<div class="thesis-author">{{ c.program | escape }}</div>{% endif %}
       <div class="thesis-meta">

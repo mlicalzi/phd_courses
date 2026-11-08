@@ -1,101 +1,85 @@
-# PhD Courses in SECS-S06
+# PhD Courses | SECS-S06
 
-A static, filterable archive of doctoral courses, modelled on
-[stat04a.github.io/phd_theses](https://stat04a.github.io/phd_theses/) but shaped around the
-fields of the *Corsi di dottorato – Area SECS-S06* inventory.
+A list of doctoral courses in the SECS-S06 area, built the same way as
+[AMASES_theses](https://github.com/mlicalzi/AMASES_theses): a Jekyll site published with
+GitHub Pages, one data file, one layout, one page. KISS applies.
 
-This repository is a **scaffold**: site generator, data schema, CI and two placeholder
-entries. It contains no importer for the Word file; you fill `data/` yourself (or with any
-tool you like) and the site builds from it. Data are plain YAML, one file per course.
+This repository is a **scaffold**: it holds the page construction and two placeholder courses.
+The real entries still have to be added to `_data/courses.yml`.
 
 ## Layout
 
 ```
-data/
-  meta.yaml            site title, intro texts (EN + original IT), as-of date, working group
-  universities.yaml    one entry per university (id, name, short name)
-  courses/
-    _template.yaml     fully commented template (ignored by the build)
-    <university-id>/   one YAML file per course
-      some-course.yaml
-scripts/
-  build_site.py        data/*.yaml -> site/
-  validate.py          schema check, also run in CI
-  dataset.py           YAML loading + CSV export
-templates/page.html    page shell
-assets/                style.css, filter.js (vanilla JS, no dependencies)
-requirements.txt       PyYAML (the only dependency)
-.github/workflows/pages.yml   validate, build, deploy to GitHub Pages
+_config.yml              site title and description
+_data/courses.yml        one entry per course  <- the file you edit
+_data/meta.yml           intro texts (English draft + original Italian), as-of date, working group
+_layouts/default.html    page shell
+_includes/yn.html        prints Yes/No answers safely (see "YAML pitfall")
+index.html               the page: groups courses by university
+courses.json             the same data, for reuse (generated from _data/courses.yml)
+assets/css/style.css     styles (the AMASES look, plus course entries)
+assets/js/filter.js      free-text search (optional: the page works without JavaScript)
+.github/workflows/pages.yml   builds with Jekyll and deploys to GitHub Pages
+Gemfile                  optional, only for previewing on your own computer
 ```
 
-## Pages produced
+## Adding a course
 
-- `index.html`: courses grouped by university, with a university bar (like the year bar of
-  the theses site), free-text search, and filters for university, month and
-  "open to external students" (in person / online). Filter state is kept in the URL.
-- `stats.html`: courses by university and by month, hours, access to external students.
-- `courses.json`, `courses.csv`: the same data for reuse.
+Append an entry to `_data/courses.yml`. The page groups entries by `university`, so spell the
+university identically in every entry. The fields follow the SECS-S06 inventory:
 
-## Data schema
-
-`data/universities.yaml`: list of `{id, name, short, groups}`.
-
-`data/courses/**/*.yaml`: one mapping per file. Required: `title`. `id` defaults to the file
-name and `university_id` to the name of the folder the file sits in, so
-`data/courses/padova/volterra-equations.yaml` needs neither (put them in the file to override).
-Files whose name starts with `_` are ignored. `data/courses/_template.yaml` documents every
-field with comments:
-
-| field | type | meaning |
-|---|---|---|
-| `phd_programs` | list of text | PhD programme(s) the course belongs to |
-| `referent_raw` | text | contact person, as shown |
-| `emails` | list of text | contact e-mail addresses (used in the CSV) |
-| `hours_raw` / `hours` | text / number | hours as written / a single number used in statistics |
-| `period_raw` / `period_months` | text / list of 1-12 | period as written / calendar months it runs, used by the month filter and statistics |
-| `intensive_raw` / `intensive` | text / `yes`, `no` | "Intensivo o meno" as written / classification |
-| `in_person_raw` / `in_person` | text / `yes`, `no`, `conditional` | can external students attend in person |
-| `online_raw` / `online` | text / `yes`, `no`, `conditional` | can external students attend online |
-| `program` | text | "Programma di massima" |
-| `syllabus` | text | syllabus; may be long (use a `|` block) |
-| `notes` | text | notes |
-| `links` | list of `{text, url}` | extra links (`http`, `https` or `mailto`) |
-
-The `*_raw` text is what the page displays; the normalised twin only drives filters,
-statistics and the CSV. Leave the twin out when the raw text cannot be reduced to a value.
-
-**YAML pitfalls, handled here.** Standard YAML reads a bare `no` as the boolean false and
-`2026-08-21` as a date. This project's loader switches both conversions off, so `no`, `yes` and
-dates stay plain text and you can write them without quotes. Other tools reading these files
-(for example a stock `yaml.safe_load`) will not do that.
-
-## Local use
-
-```
-pip install -r requirements.txt
-python scripts/validate.py
-python scripts/build_site.py      # writes ./site
-python -m http.server 8000 --directory site
+```yaml
+- university: Roma 1
+  phd_program: "Denominazione dottorato"
+  title: "Denominazione corso"
+  url:                       # optional link for the title
+  referent: "Name Surname (name.surname@uni.it)"
+  hours: "30 ore accademiche"
+  period: "Novembre - Dicembre"
+  intensive: "No"
+  in_person: "Sì"
+  online: "No"
+  programme: |
+    General programme ("Programma di massima").
+    Line breaks are kept.
+  syllabus: |
+    Syllabus.
+  notes:
 ```
 
-or `make serve`. Python 3.10+.
+Only `university` and `title` are needed; empty fields are simply not shown. Text is displayed
+exactly as written, so there is nothing to normalise.
 
-## Publish on GitHub Pages
+**YAML pitfall.** Jekyll reads a bare `No`, `Yes`, `On` or `Off` as a boolean. Put short answers
+in quotes (`online: "No"`). If you forget, the page still prints No/Yes thanks to
+`_includes/yn.html`, but quoting keeps whatever the university wrote ("SI, obbligatoria").
+A syntax error in the YAML makes the GitHub build fail, and the log shows the line.
+
+## Publishing
 
 1. Push to a GitHub repository (default branch `main`).
 2. Settings, Pages, Source: **GitHub Actions**.
-3. Every push to `main` validates the data, builds the site and deploys it. Pull requests
-   run the validation and build without deploying.
+3. Every push to `main` rebuilds and deploys the site (workflow copied from AMASES_theses).
 
-Links in the generated site are relative, so it works under `https://<user>.github.io/<repo>/`.
+Links are built with Jekyll's `relative_url`, so the site works under
+`https://<user>.github.io/<repo>/`.
+
+## Previewing locally (optional)
+
+You can skip this and just push. To preview you need Ruby:
+
+```
+bundle install
+bundle exec jekyll serve
+```
+
+then open http://localhost:4000. On macOS the system Ruby is too old; install a recent one
+(for example `brew install ruby`) first.
 
 ## To do before publishing
 
-- Replace the placeholder university (`data/universities.yaml`) and the example courses
-  (`data/courses/example-university/`).
-- Set `contact_email` and `repo_url` in `data/meta.yaml` (both are empty, and the site
-  simply omits them).
-- `intro_en` is a draft translation of the Italian introduction; review it.
-- The inventory lists contact persons with e-mail addresses. Check you are happy for them
-  to be public before publishing.
-- Add a licence file once you have decided how the data may be reused.
+- Replace the two placeholder courses in `_data/courses.yml`.
+- `intro_en` in `_data/meta.yml` is a draft translation of the Italian introduction; review it.
+- The inventory lists contact persons with e-mail addresses. Check you are happy for them to
+  be public.
+- Add a `LICENSE` file once you have decided how the data may be reused.

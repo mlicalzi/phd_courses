@@ -1,1 +1,5 @@
-
+{%- comment -%}
+  Prints a yes/no style answer. Usage: {% include yn.html v=course.online %}
+  Jekyll reads an unquoted No/Yes in YAML as false/true; print those as No/Yes, and anything else as written.
+{%- endcomment -%}
+{%- if include.v == false -%}No{%- elsif include.v == true -%}Yes{%- else -%}{{ include.v | escape }}{%- endif -%}

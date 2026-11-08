@@ -1,6 +1,6 @@
 # One entry per university. `id` must match the `university_id` of its courses (or the
 # name of its folder under data/courses/). `short` is used in the navigation bar.
-- id: example-university
-  name: Example University (placeholder - delete me)
+- id: unive
+  name: Università Ca' Foscari Venezia
   short: Example
   groups: []   # optional: the headings this university appears under in the source document

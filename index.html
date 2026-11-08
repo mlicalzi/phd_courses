@@ -58,11 +58,18 @@ title: PhD Courses | SECS-S06
         online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}
       </div>
       {% if c.syllabus %}
-      <details class="thesis-more">
-        <summary>Syllabus</summary>
-        {% if c.syllabus %}<h4>Syllabus</h4><div class="prose">{{ c.syllabus | strip | escape }}</div>{% endif %}
-      </details>
-      {% endif %}
+      <h4>Syllabus</h4>
+        {% assign syl = c.syllabus | strip %}
+        {% assign tokens = syl | normalize_whitespace | split: ' ' %}
+        {% assign has_url = false %}
+        {% for t in tokens %}{% assign h7 = t | slice: 0, 7 %}{% assign h8 = t | slice: 0, 8 %}{% if h7 == 'http://' or h8 == 'https://' %}{% assign has_url = true %}{% endif %}{% endfor %}
+        {% if has_url %}
+          {%- comment -%} The syllabus contains a URL: print the URL(s) as links, nothing else. {%- endcomment -%}
+          {% for t in tokens %}{% assign h7 = t | slice: 0, 7 %}{% assign h8 = t | slice: 0, 8 %}{% if h7 == 'http://' or h8 == 'https://' %}<div class="prose"><a href="{{ t | escape }}" target="_blank" rel="noreferrer">{{ t | escape }}</a></div>{% endif %}{% endfor %}
+        {% else %}
+          <div class="prose">{{ syl | escape }}</div>
+        {% endif %}
+        {% endif %}      
       {% if c.notes %}<div class="thesis-supervisor">Note: {{ c.notes | escape }}</div>{% endif %}
     </li>
     {% endfor %}

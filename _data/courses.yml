@@ -5,7 +5,6 @@
 # Fields, following the SECS-S06 inventory (all optional except `university` and `title`):
 #   university    display name, e.g. "Roma 1" or "Ca' Foscari"
 #   program       "Denominazione dottorato"
-#   coordinator   "Coordinatore"
 #   title         "Denominazione corso"
 #   instructor    "Docente"
 #   url           optional link for the title (course page)
@@ -24,9 +23,8 @@
 - university: Università Ca' Foscari Venezia
   id: unive
   program: PhD in Economics
-  coordinator: Francesca Zantomio 
-  title: "Advanced Microeconomics"
-  instructor: "Marco LiCalzi"
+  title: Advanced Microeconomics
+  instructor: Marco LiCalzi
   url: https://www.unive.it/data/course/585612
   hours: 30
   period: "Nov.-Dec."
@@ -38,9 +36,8 @@
 - university: Università di Verona
   id: univr
   program: Dottorato in Economia e Finanza
-  coordinator: "Athena Picarelli"
-  title: "Continuous Time Econometrics"
-  instructor: "Cecilia Mancini, Chiara Amorino"
+  title: Continuous Time Econometrics
+  instructor: Cecilia Mancini, Chiara Amorino
   url: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
   hours: 20
   period: "Nov.-Dec."

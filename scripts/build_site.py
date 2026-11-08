@@ -225,8 +225,7 @@ def render_index(courses, unis, meta) -> str:
             + "".join(f"<p>{esc(p)}</p>" for p in en[1:])
             + "</details>"
         )
-    intro_it = "".join(f"<p>{esc(p)}</p>" for p in meta.get("intro_it", []))
-
+        
     uni_options = "".join(
         f'<option value="{esc(u["id"])}">{esc(u["short"])} ({len(by_uni[u["id"]])})</option>' for u in unis_sorted
     )
@@ -252,7 +251,6 @@ def render_index(courses, unis, meta) -> str:
 <p class="subtitle">{esc(meta.get("subtitle", ""))}</p>
 <div class="intro">{intro_en}</div>
 <p class="stats-line">{stats_line}</p>
-<details class="it"><summary>Testo originale in italiano</summary>{intro_it}</details>
 
 <form class="filters" role="search" aria-label="Filter courses" onsubmit="return false">
   <label class="f-q"><span>Search</span>

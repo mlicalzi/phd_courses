@@ -1,0 +1,77 @@
+---
+layout: default
+title: PhD Courses | SECS-S06
+---
+
+{% assign courses = site.data.courses %}
+{% assign groups = courses | group_by: 'university' | sort_natural: 'name' %}
+{% assign intro = site.data.meta.intro_en %}
+
+<h1>PhD Courses</h1>
+
+<p class="intro">{{ intro[0] | escape }}</p>
+
+<details class="about">
+  <summary>About this inventory</summary>
+  {% for p in intro offset: 1 %}<p>{{ p | escape }}</p>{% endfor %}
+  <p>Working group: {{ site.data.meta.working_group | join: ', ' | escape }}.</p>
+</details>
+
+<details class="about">
+  <summary>Testo originale in italiano</summary>
+  {% for p in site.data.meta.intro_it %}<p>{{ p | escape }}</p>{% endfor %}
+</details>
+
+<p class="stats">
+  Academic year {{ site.data.meta.academic_year | replace: '-', '&ndash;' }}
+  &middot; collected {{ site.data.meta.as_of }}
+  &middot; {{ courses.size }} {% if courses.size == 1 %}course{% else %}courses{% endif %}
+  &middot; {{ groups.size }} {% if groups.size == 1 %}university{% else %}universities{% endif %}
+</p>
+
+<div class="search">
+  <label for="q">Search</label>
+  <input id="q" type="search" placeholder="title, topic, syllabus, contact&hellip;" autocomplete="off">
+  <span id="result-count" aria-live="polite"></span>
+</div>
+
+<nav class="year-nav" aria-label="Universities">
+  {% for group in groups %}
+    <a href="#{{ group.name | slugify }}" data-section="{{ group.name | slugify }}">{{ group.name | escape }} <span class="n">{{ group.size }}</span></a>
+  {% endfor %}
+</nav>
+
+<p id="no-results" class="no-results" hidden>No course matches this search.</p>
+
+{% for group in groups %}
+<section id="{{ group.name | slugify }}" class="uni">
+  <h2 class="year-heading">{{ group.name | escape }}</h2>
+  <ul class="thesis-list">
+    {% for c in group.items %}
+    <li class="course" id="{{ group.name | slugify }}-{{ c.title | slugify }}">
+      <div class="thesis-title">{% if c.url and c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
+      {% if c.phd_program %}<div class="thesis-author">{{ c.phd_program | escape }}</div>{% endif %}
+      <div class="thesis-meta">
+        {% if c.hours %}<span><strong>Hours:</strong> {{ c.hours | escape }}</span>{% endif %}
+        {% if c.period %}<span><strong>Period:</strong> {{ c.period | escape }}</span>{% endif %}
+        {% if c.intensive != nil and c.intensive != '' %}<span><strong>Intensive:</strong> {% include yn.html v=c.intensive %}</span>{% endif %}
+      </div>
+      {% if c.referent %}<div class="thesis-supervisor">Contact: {{ c.referent | escape }}</div>{% endif %}
+      <div class="thesis-supervisor">
+        External students &ndash;
+        in person: {% if c.in_person != nil and c.in_person != '' %}{% include yn.html v=c.in_person %}{% else %}not stated{% endif %};
+        online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}
+      </div>
+      {% if c.programme or c.syllabus %}
+      <details class="thesis-more">
+        <summary>Programme and syllabus</summary>
+        {% if c.programme %}<h4>General programme</h4><div class="prose">{{ c.programme | strip | escape }}</div>{% endif %}
+        {% if c.syllabus %}<h4>Syllabus</h4><div class="prose">{{ c.syllabus | strip | escape }}</div>{% endif %}
+      </details>
+      {% endif %}
+      {% if c.notes %}<div class="thesis-supervisor">Note: {{ c.notes | escape }}</div>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

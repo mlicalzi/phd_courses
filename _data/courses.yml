@@ -41,13 +41,13 @@ it# One entry per course. The page groups entries by `university`, so write the 
   notes:
 
 - university: Example University
-  phd_program: PhD in Economics and Finance (example)
-  title: "EXAMPLE - Optimisation for decisions"
+  phd_program: PhD in Economics and Finance
+  title: "Optimisation for decisions"
   referent: "John Roe"
-  hours: "da 10 a 12"
-  period: "I semestre"
-  in_person: "Sì"
-  online: "Su richiesta"
+  hours: "10 to 12"
+  period: "I semester"
+  in_person: "Y"
+  online: "On demand"
   syllabus: |
     Placeholder syllabus.
   notes: "Example note."

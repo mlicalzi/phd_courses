@@ -26,19 +26,14 @@
 - university: Università Ca' Foscari Venezia
   phd_program: PhD in Economics
   title: "Advanced Microeconomics"
-  url:
+  url: https://www.unive.it/data/course/585612
   referent: "Marco LiCalzi (licalzi@unive.it)"
-  hours: "30 ore accademiche"
-  period: "Novembre - Dicembre"
+  hours: "30"
+  period: "Nov.-Dec."
   intensive: "N"
   in_person: "Y"
   online: "N"
-  programme: |
-    Placeholder general programme.
-    - topic one
-    - topic two
-  syllabus:
-  notes:
+  syllabus: https://www.unive.it/data/course/585612/programma
 
 - university: Example University
   phd_program: PhD in Economics and Finance
@@ -48,6 +43,10 @@
   period: "I semester"
   in_person: "Y"
   online: "On demand"
+  programme: |
+    Placeholder general programme.
+    - topic one
+    - topic two
   syllabus: |
     Placeholder syllabus.
   notes: "Example note."

@@ -5,9 +5,10 @@
 # Fields, following the SECS-S06 inventory (all optional except `university` and `title`):
 #   university    display name, e.g. "Roma 1" or "Ca' Foscari"
 #   phd_program   "Denominazione dottorato"
+#   coordinator   "Coordinatore"
 #   title         "Denominazione corso"
+#   instructor    "Docente"
 #   url           optional link for the title (course page)
-#   referent      "Referente" (name and e-mail, as supplied)
 #   hours         "Numero di ore approssimativo"
 #   period        "Periodo di erogazione"
 #   intensive     "Intensivo o meno"
@@ -19,16 +20,15 @@
 # YAML PITFALL: write short answers in quotes. Jekyll reads a bare No, Yes, On or Off as the
 # boolean false/true. The page prints them back as No/Yes anyway, but quoting keeps exactly
 # what the university wrote ("No", "Sì", "SI, obbligatoria", "Su richiesta").
-#
-# The two entries below are placeholders: delete them.
 
 - university: Università Ca' Foscari Venezia
   id: unive
   phd_program: Economics
+  coordinator: Francesca Zantomio 
   title: "Advanced Microeconomics"
+  instructor: "Marco LiCalzi"
   url: https://www.unive.it/data/course/585612
-  referent: "Marco LiCalzi (licalzi@unive.it)"
-  hours: "30"
+  hours: 30
   period: "Nov.-Dec."
   intensive: "N"
   in_person: "Y"
@@ -38,15 +38,15 @@
 - university: Università di Verona
   id: univr
   phd_program: Economia e Finanza
+  coordinator: "Athena Picarelli"
   title: "Continuous Time Econometrics"
-  url: https://www.unive.it/data/course/585612
-  referent: "Marco LiCalzi (licalzi@unive.it)"
-  hours: "30"
+  instructor: "Cecilia Mancini, Chiara Amorino"
+  url: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
+  hours: 20
   period: "Nov.-Dec."
-  intensive: "N"
   in_person: "Y"
-  online: "N"
-  syllabus: https://www.unive.it/data/course/585612/programma
+  online: "Y"
+  syllabus: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
 
 - university: Example University
   phd_program: PhD in Economics and Finance

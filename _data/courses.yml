@@ -30,9 +30,9 @@ it# One entry per course. The page groups entries by `university`, so write the 
   referent: "Marco LiCalzi (licalzi@unive.it)"
   hours: "30 ore accademiche"
   period: "Novembre - Dicembre"
-  intensive: "No"
-  in_person: "Sì"
-  online: "No"
+  intensive: "N"
+  in_person: "Y"
+  online: "N"
   programme: |
     Placeholder general programme.
     - topic one

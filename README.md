@@ -73,10 +73,6 @@ bundle exec jekyll serve
 then open http://localhost:4000. On macOS the system Ruby is too old; install a recent one
 (for example `brew install ruby`) first.
 
-## To do before publishing
+## To do 
 
-- Replace the two placeholder courses in `_data/courses.yml`.
-- `intro_en` in `_data/meta.yml` is a draft translation of the Italian introduction; review it.
-- The inventory lists contact persons with e-mail addresses. Check you are happy for them to
-  be public.
 - Add a `LICENSE` file once you have decided how the data may be reused.

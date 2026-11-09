@@ -21,8 +21,25 @@
 # boolean false/true. The page prints them back as No/Yes anyway, but quoting keeps exactly
 # what the university wrote ("No", "Sì", "SI, obbligatoria", "Su richiesta").
 
-- university: Università Ca' Foscari Venezia
-  id: UniVe
+- id: UniPa 
+  university: Università di Palermo
+  program: PhD in Economics, Business and Statistics
+  title: Practical Financial Optimization
+  instructor: Andrea Consiglio
+  url: 
+  hours: 30
+  period: "Mar.-Apr."
+  intensive: "Y"
+  in_person: "Y"
+  online: "Y"
+  syllabus: Introduction to GAMS. Creation of projects and use of statements. |  
+    Implementation of the Markowitz model. |
+    Maximization of the expected utility. | 
+    CVaR model implementation |
+    The Ramsey growth model
+
+- id: UniVe 
+  university: Università Ca' Foscari Venezia
   program: PhD in Economics
   title: Advanced Microeconomics
   instructor: Marco LiCalzi
@@ -34,8 +51,8 @@
   online: "N"
   syllabus: https://www.unive.it/data/course/585612/programma
 
-- university: Università di Verona
-  id: UniVr
+- id: UniVr
+  university: Università di Verona
   program: Dottorato in Economia e Finanza
   title: Continuous Time Econometrics
   instructor: Cecilia Mancini, Chiara Amorino

@@ -230,6 +230,8 @@ details.thesis-more h4 {
   color: #374151;
 }
 
+.prose p { margin: 0; }
+
 li.course[hidden],
 section.uni[hidden] {
   display: none;

@@ -1,9 +1,10 @@
-# One entry per course. The page groups entries by `university`, so write the university
+# One entry per course. The page groups entries by `id`, so write the university
 # name identically in every entry of that university (it is also the heading and the label
 # in the navigation bar). Entries keep the order of this file within each university.
 #
 # Fields, following the SECS-S06 inventory (all optional except `university` and `title`):
-#   university    display name, e.g. "Roma 1" or "Ca' Foscari"
+#   id            shortcut, e.g. "UniBo" or "UniVe"
+#   university    full name, e.g. "U. Bologna" or "U. Ca' Foscari Venezia"
 #   program       "Denominazione dottorato"
 #   title         "Denominazione corso"
 #   instructor    "Docente"

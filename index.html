@@ -44,7 +44,7 @@ title: PhD Courses | SECS-S06
   <ul class="thesis-list">
     {% for c in group.items %}
     <li class="course" id="{{ c.university | slugify }}-{{ c.title | slugify }}">
-      <div class="thesis-title">{% if c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
+      <div class="thesis-title">{% if if c.url and c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
       {% if c.program %}<div class="thesis-author">{{ c.program | escape }}</div>{% endif %}
       <div class="thesis-meta">
         {% if c.hours %}<span><strong>Hours:</strong> {{ c.hours | escape }}</span>{% endif %}
@@ -67,9 +67,13 @@ title: PhD Courses | SECS-S06
           {%- comment -%} The syllabus contains a URL: print the URL(s) as links, nothing else. {%- endcomment -%}
           {% for t in tokens %}{% assign h7 = t | slice: 0, 7 %}{% assign h8 = t | slice: 0, 8 %}{% if h7 == 'http://' or h8 == 'https://' %}<div class="prose"><a href="{{ t | escape }}" target="_blank" rel="noreferrer">{{ t | escape }}</a></div>{% endif %}{% endfor %}
         {% else %}
-          <div class="prose">{{ syl | escape }}</div>
+          {%- comment -%} No URL: print a paragraph, with a line break wherever a "|" appears in courses.yml. {%- endcomment -%}
+          {% assign parts = syl | normalize_whitespace | split: '|' %}
+          {% assign first_line = true %}
+          <div class="prose"><p>{% for part in parts %}{% assign line = part | strip %}{% if line != '' %}{% unless first_line %}<br>{% endunless %}{{ line | escape }}{% assign first_line = false %}{% endif %}{% endfor %}</p></div>
         {% endif %}
-        </span>{% endif %}      
+        </span>{% endif %}
+      </div>
       {% if c.notes %}<div class="thesis-supervisor">Note: {{ c.notes | escape }}</div>{% endif %}
     </li>
     {% endfor %}

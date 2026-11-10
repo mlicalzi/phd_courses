@@ -62,6 +62,19 @@
   online: "N"
   syllabus: https://www.unive.it/data/course/585614/programma
 
+- id: UniVe 
+  university: Università Ca' Foscari Venezia
+  program: PhD in Management
+  title: Mathematics for Modelling in Management
+  instructor: Marco Tolotti
+  url: https://www.unive.it/data/course/585614
+  hours: 30
+  period: "Sep.-Oct."
+  intensive:
+  in_person: "Y"
+  online: "N"
+  syllabus: https://www.unive.it/data/course/585614/programma
+  
 - id: UniVr
   university: Università di Verona
   program: Dottorato in Economia e Finanza

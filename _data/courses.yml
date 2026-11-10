@@ -49,6 +49,19 @@
   online: "N"
   syllabus: https://www.unive.it/data/course/585612/programma
 
+- id: UniVe 
+  university: Università Ca' Foscari Venezia
+  program: PhD in Economics
+  title: Computational Methods for Socio-Economic Applications
+  instructor: Paolo Pellizzari
+  url: https://www.unive.it/data/course/585614
+  hours: 30
+  period: "Sep.-Oct."
+  intensive:
+  in_person:
+  online:
+  syllabus: https://www.unive.it/data/course/585614/programma
+
 - id: UniVr
   university: Università di Verona
   program: Dottorato in Economia e Finanza

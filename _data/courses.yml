@@ -58,8 +58,8 @@
   hours: 30
   period: "Sep.-Oct."
   intensive:
-  in_person:
-  online:
+  in_person: "Y"
+  online: "N"
   syllabus: https://www.unive.it/data/course/585614/programma
 
 - id: UniVr

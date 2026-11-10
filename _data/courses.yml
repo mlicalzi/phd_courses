@@ -6,7 +6,7 @@
 #   id            shortcut, e.g. "UniBo" or "UniVe"
 #   university    full name, e.g. "U. Bologna" or "U. Ca' Foscari Venezia"
 #   program       "Denominazione dottorato"
-#   title         "Denominazione corso"
+#   title         "Denominazione corso" (capitalized in English, lower-cased in Italian)
 #   instructor    "Docente"
 #   url           optional link for the title (course page)
 #   hours         "Numero di ore approssimativo"

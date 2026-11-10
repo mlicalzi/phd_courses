@@ -29,9 +29,9 @@
   url: 
   hours: 30
   period: "Mar.-Apr."
-  intensive: "Y"
-  in_person: "Y"
-  online: "Y"
+  intensive: Y
+  in_person: Y
+  online: Y
   syllabus: Introduction to GAMS. Creation of projects and use of statements. |  
     Implementation of the Markowitz model. Maximization of the expected utility. | 
     CVaR model implementation. The Ramsey growth model.
@@ -44,9 +44,9 @@
   url: https://www.unive.it/data/course/585612
   hours: 30
   period: "Nov.-Dec."
-  intensive: "N"
-  in_person: "Y"
-  online: "N"
+  intensive: N
+  in_person: Y
+  online: N
   syllabus: https://www.unive.it/data/course/585612/programma
 
 - id: UniVe 
@@ -57,9 +57,9 @@
   url: https://www.unive.it/data/course/585614
   hours: 30
   period: "Sep.-Oct."
-  intensive:
-  in_person: "Y"
-  online: "N"
+  intensive: N
+  in_person: Y
+  online: N
   syllabus: https://www.unive.it/data/course/585614/programma
 
 - id: UniVe 
@@ -67,13 +67,13 @@
   program: PhD in Management
   title: Mathematics for Modelling in Management
   instructor: Marco Tolotti
-  url: https://www.unive.it/data/course/585614
+  url: https://www.unive.it/data/course/746810
   hours: 30
   period: "Sep.-Oct."
-  intensive:
-  in_person: "Y"
-  online: "N"
-  syllabus: https://www.unive.it/data/course/585614/programma
+  intensive: N
+  in_person: Y
+  online: On request, only for specific cases
+  syllabus: https://www.unive.it/data/course/746810/programma
   
 - id: UniVr
   university: Università di Verona
@@ -83,7 +83,7 @@
   url: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
   hours: 20
   period: "Oct.-Dec."
-  intensive: "N"
-  in_person: "Y"
-  online: "Y"
+  intensive: N
+  in_person: Y
+  online: Y
   syllabus: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en

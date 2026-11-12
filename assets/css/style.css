@@ -105,6 +105,13 @@ ul.thesis-list li:last-child {
   text-decoration: underline;
 }
 
+/* Title without a URL: same size and weight as a link, but plain (not blue, not clickable) */
+.thesis-title .title-plain {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
 .thesis-supervisor {
   font-size: 0.875rem;
   color: #6b7280;

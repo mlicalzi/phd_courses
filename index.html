@@ -50,7 +50,16 @@ title: PhD Courses | SECS-S06
         {% if c.period %}<span><strong>Period:</strong> {{ c.period | escape }}</span>{% endif %}
         {% if c.intensive != nil and c.intensive != '' %}<span><strong>Intensive:</strong> {% include yn.html v=c.intensive %}</span>{% endif %}
       </div>
-      {% if c.instructor %}<div class="thesis-supervisor">Instructor: {{ c.instructor | escape }}</div>{% endif %}
+      {%- comment -%} instructor may be a YAML list (preferred) or a plain string; join+split turns both into a list. {%- endcomment -%}
+      {% assign instructors = c.instructor | join: '~~' | split: '~~' %}
+      {% if instructors.size > 0 %}
+      <div class="thesis-supervisor">
+        {% if instructors.size == 1 %}Instructor: {{ instructors[0] | escape }}
+        {% else %}Instructors:
+          {% for instructor in instructors %}{{ instructor | escape }}{% unless forloop.last %}{% if forloop.rindex == 2 %} and {% else %}, {% endif %}{% endunless %}{% endfor %}
+        {% endif %}
+      </div>
+      {% endif %}
       <div class="thesis-supervisor">
         Guest students in person: {% if c.in_person != nil and c.in_person != '' %}{% include yn.html v=c.in_person %}{% else %}not stated{% endif %};
         online: {% if c.online != nil and c.online != '' %}{% include yn.html v=c.online %}{% else %}not stated{% endif %}

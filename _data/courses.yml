@@ -80,8 +80,8 @@
   in_person: Y
   online: Y
   syllabus: Probability and continuous-time stochastic processes for mathematical models in finance.| 
-  Stochastic calculus for diffusion and jump-diffusion processes, applications in finance.|
-  Hedging and pricing of derivatives.
+    Stochastic calculus for diffusion and jump-diffusion processes, applications in finance.|
+    Hedging and pricing of derivatives.
 
 - id: UniRoma2 
   university: Università di Roma Tor Vergata

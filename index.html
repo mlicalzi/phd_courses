@@ -44,7 +44,7 @@ title: PhD Courses | SECS-S06
   <ul class="thesis-list">
     {% for c in group.items %}
     <li class="course" id="{{ c.university | slugify }}-{{ c.title | slugify }}">
-      <div class="thesis-title">{% if c.url and c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<a href="#{{ group.name | slugify }}-{{ c.title | slugify }}">{{ c.title | escape }}</a>{% endif %}</div>
+      <div class="thesis-title">{% if c.url and c.url != '' %}<a href="{{ c.url }}" target="_blank" rel="noreferrer">{{ c.title | escape }}</a>{% else %}<span class="title-plain">{{ c.title | escape }}</span>{% endif %}</div>
       <div class="thesis-meta">
         {% if c.hours %}<span><strong>Hours:</strong> {{ c.hours | escape }}</span>{% endif %}
         {% if c.period %}<span><strong>Period:</strong> {{ c.period | escape }}</span>{% endif %}

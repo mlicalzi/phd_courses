@@ -21,11 +21,42 @@
 # boolean false/true. The page prints them back as No/Yes anyway, but quoting keeps exactly
 # what the university wrote ("No", "Sì", "SI, obbligatoria", "Su richiesta").
 
+- id: UniBg 
+  university: Università di Roma Tor Vergata
+  program: PhD in Analytics for Economics and Management
+  title: Analytical Methodsfor Economics and Finance
+  instructor: 
+    - Giorgia Oggioni
+    - Rossana Riccardi
+  url: 
+  hours: 24
+  period: "Nov.-Dec."
+  intensive: 
+  in_person: Y
+  online: N
+  syllabus: https://drive.google.com/file/d/1wqnALKWaOP6_CJQTvw1ICDFMycRVd4_4/view
+
+- id: UnInsubria 
+  university: Università dell’Insubria
+  program: PhD in Methods and Models for Economic Decisions
+  title: Advanced Mathematical Methods for Economic Decisions
+  instructor: 
+    - Elisa Mastrogiacomo
+    - Marco Tarsia
+  url: 
+  hours: 10-12
+  period: "Nov.-Dec."
+  intensive: 
+  in_person: Y
+  online: Y
+  syllabus: Overview of some fundamental tools (e.g., linear algebra, dynamical systems, stochastic processes, control theory).
+  
 - id: UniPa 
   university: Università di Palermo
   program: PhD in Economics, Business and Statistics
   title: Practical Financial Optimization
-  instructor: Andrea Consiglio
+  instructor: 
+    - Andrea Consiglio
   url: 
   hours: 30
   period: "Mar.-Apr."
@@ -36,11 +67,45 @@
     Implementation of the Markowitz model. Maximization of the expected utility. | 
     CVaR model implementation. The Ramsey growth model.
 
+- id: UniRoma1 
+  university: Università Roma Sapienza
+  program: Dottorato in Modelli per l'Economia, il Territorio e la Finanza
+  title: Mathematical Finance
+  instructor: 
+    - Claudia Ceci
+  url: 
+  hours: 18
+  period: "Jan."
+  intensive: Y
+  in_person: Y
+  online: Y
+  syllabus: Probability and continuous-time stochastic processes for mathematical models in finance.| 
+  Stochastic calculus for diffusion and jump-diffusion processes, applications in finance.|
+  Hedging and pricing of derivatives.
+
+- id: UniRoma2 
+  university: Università di Roma Tor Vergata
+  program: PhD in Economics and Finance
+  title: Mathematical Finance
+  instructor: 
+    - Katia Colaneri
+    - Stefano Herzel
+    - Paolo Pigato
+    - Alessandro Ramponi
+  url: 
+  hours: 30
+  period: "Oct.-Dec."
+  intensive: 
+  in_person: Y
+  online: N
+  syllabus: Stochastic calculus for finance. | Black-Scholes model. Interest Rates models.
+
 - id: UniVe 
   university: Università Ca' Foscari Venezia
   program: PhD in Economics
   title: Advanced Microeconomics
-  instructor: Marco LiCalzi
+  instructor: 
+    - Marco LiCalzi
   url: https://www.unive.it/data/course/585612
   hours: 30
   period: "Nov.-Dec."
@@ -53,7 +118,8 @@
   university: Università Ca' Foscari Venezia
   program: PhD in Economics
   title: Computational Methods for Socio-Economic Applications
-  instructor: Paolo Pellizzari
+  instructor: 
+    - Paolo Pellizzari
   url: https://www.unive.it/data/course/585614
   hours: 30
   period: "Sep.-Oct."
@@ -66,7 +132,8 @@
   university: Università Ca' Foscari Venezia
   program: PhD in Management
   title: Mathematics for Modelling in Management
-  instructor: Marco Tolotti
+  instructor: 
+    - Marco Tolotti
   url: https://www.unive.it/data/course/746810
   hours: 30
   period: "Sep.-Oct."
@@ -79,7 +146,9 @@
   university: Università di Verona
   program: Dottorato in Economia e Finanza
   title: Continuous Time Econometrics
-  instructor: Cecilia Mancini, Chiara Amorino
+  instructor: 
+    - Cecilia Mancini
+    - Chiara Amorino
   url: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
   hours: 20
   period: "Oct.-Dec."
@@ -87,3 +156,17 @@
   in_person: Y
   online: Y
   syllabus: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
+
+- id: UniVr
+  university: Università di Verona
+  program: Dottorato in Economia e Finanza
+  title: Stochastic Optimization and Control 
+  instructor: 
+    - Athena Picarelli
+  url: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001089&aa=2026/2027&lang=en
+  hours: 20
+  period: "Jan.-Mar."
+  intensive: N
+  in_person: Y
+  online: Y
+  syllabus: https://www.corsi.univr.it/?ent=cs&id=1008&menu=studiare&tab=insegnamenti&codiceCs=DR-EF226&codins=dt001092&aa=2026/2027&lang=en

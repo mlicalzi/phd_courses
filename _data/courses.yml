@@ -22,7 +22,7 @@
 # what the university wrote ("No", "Sì", "SI, obbligatoria", "Su richiesta").
 
 - id: UniBg 
-  university: Università di Roma Tor Vergata
+  university: Università di Bergamo
   program: PhD in Analytics for Economics and Management
   title: Analytical Methodsfor Economics and Finance
   instructor: 
